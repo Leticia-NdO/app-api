@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666809939864" clover="3.2.0">
-  <project timestamp="1666809939865" name="All files">
-    <metrics statements="31" coveredstatements="25" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2" elements="37" coveredelements="30" complexity="0" loc="31" ncloc="31" packages="2" files="2" classes="2"/>
+<coverage generated="1666809985634" clover="3.2.0">
+  <project timestamp="1666809985634" name="All files">
+    <metrics statements="39" coveredstatements="25" conditionals="5" coveredconditionals="3" methods="3" coveredmethods="2" elements="47" coveredelements="30" complexity="0" loc="39" ncloc="39" packages="3" files="3" classes="3"/>
     <package name="controllers">
       <metrics statements="25" coveredstatements="19" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="signup.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/signup.ts">
@@ -43,6 +43,20 @@
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="protocols">
+      <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="http.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/protocols/http.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
       </file>
     </package>
   </project>
