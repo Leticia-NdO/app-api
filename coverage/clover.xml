@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666810549672" clover="3.2.0">
-  <project timestamp="1666810549672" name="All files">
-    <metrics statements="25" coveredstatements="19" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2" elements="32" coveredelements="25" complexity="0" loc="25" ncloc="25" packages="2" files="2" classes="2"/>
+<coverage generated="1666810669257" clover="3.2.0">
+  <project timestamp="1666810669257" name="All files">
+    <metrics statements="38" coveredstatements="24" conditionals="7" coveredconditionals="5" methods="4" coveredmethods="3" elements="49" coveredelements="32" complexity="0" loc="38" ncloc="38" packages="4" files="4" classes="4"/>
     <package name="controllers">
       <metrics statements="19" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="signup.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/signup.ts">
@@ -37,6 +37,31 @@
         <line num="4" count="8" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="helpers">
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="http-helper.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/http-helper.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="protocols">
+      <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="http.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/protocols/http.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
       </file>
     </package>
   </project>
