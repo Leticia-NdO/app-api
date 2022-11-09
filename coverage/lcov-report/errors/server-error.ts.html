@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for errors/invalid-param-error.ts</title>
+    <title>Code coverage report for errors/server-error.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">errors</a> invalid-param-error.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">errors</a> server-error.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -75,10 +75,10 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export class InvalidParamError extends Error {
-  constructor (paramName: string) {
-    super(`Invalid param: ${paramName}`)
-    this.name = 'InvalidParamError'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export class ServerError extends Error {
+  constructor () {
+    super('Internal Server Error.')
+    this.name = 'ServerError'
   }
 }
 &nbsp;</pre></td></tr></table></pre>
