@@ -7,16 +7,30 @@ interface SutTypes {
   emailValidatorStub: EmailValidator
 }
 
-const makeEmailValidator = ()
-
-const makeSut = (): SutTypes => {
+const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
     // stub é um test double, uma função que tem retorno pré definido. É uma boa prática iniciar o mock com valor positivo
     isValid (email: string): boolean {
-      return false
+      return true
     }
   }
-  const emailValidatorStub = new EmailValidatorStub()
+
+  return new EmailValidatorStub()
+}
+
+const makeEmailValidatorWithError = (): EmailValidator => {
+  class EmailValidatorStub implements EmailValidator {
+    // stub é um test double, uma função que tem retorno pré definido. É uma boa prática iniciar o mock com valor positivo
+    isValid (email: string): boolean {
+      throw new Error()
+    }
+  }
+
+  return new EmailValidatorStub()
+}
+
+const makeSut = (): SutTypes => {
+  const emailValidatorStub = makeEmailValidator()
   const sut = new SignUpController(emailValidatorStub)
   return {
     sut,
@@ -113,13 +127,8 @@ describe('SignUp Controller', () => {
   })
 
   it('Should return 500 if EmailValidator throws', () => {
-    class EmailValidatorStub implements EmailValidator {
-      // forçando o EmailValidator a retornar uma exceção pra ver se o try catch vai pegar
-      isValid (email: string): boolean {
-        throw new ServerError()
-      }
-    }
-    const emailValidatorStub = new EmailValidatorStub()
+    // forçando o EmailValidator a retornar uma exceção pra ser como o try catch vai se comportar
+    const emailValidatorStub = makeEmailValidatorWithError()
     const sut = new SignUpController(emailValidatorStub)
 
     const httpRequest = {
