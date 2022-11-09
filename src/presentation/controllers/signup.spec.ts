@@ -18,17 +18,6 @@ const makeEmailValidator = (): EmailValidator => {
   return new EmailValidatorStub()
 }
 
-const makeEmailValidatorWithError = (): EmailValidator => {
-  class EmailValidatorStub implements EmailValidator {
-    // stub é um test double, uma função que tem retorno pré definido. É uma boa prática iniciar o mock com valor positivo
-    isValid (email: string): boolean {
-      throw new Error()
-    }
-  }
-
-  return new EmailValidatorStub()
-}
-
 const makeSut = (): SutTypes => {
   const emailValidatorStub = makeEmailValidator()
   const sut = new SignUpController(emailValidatorStub)
@@ -95,6 +84,20 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
   })
 
+  it('Should return 400 if no passwordConfirmation is provided', () => {
+    const { sut } = makeSut() // sut = system under test
+    const httpRequest = {
+      body: {
+        name: 'any_name',
+        email: 'any_email2mail.com',
+        password: 'any_password'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
+  })
+
   it('Should return 400 if an invalid email is provided', () => {
     const { sut, emailValidatorStub } = makeSut() // sut = system under test
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false) // para inverter o resultado do stub
@@ -128,8 +131,11 @@ describe('SignUp Controller', () => {
 
   it('Should return 500 if EmailValidator throws', () => {
     // forçando o EmailValidator a retornar uma exceção pra ser como o try catch vai se comportar
-    const emailValidatorStub = makeEmailValidatorWithError()
-    const sut = new SignUpController(emailValidatorStub)
+    const { sut, emailValidatorStub } = makeSut()
+
+    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => {
+      throw new Error()
+    })
 
     const httpRequest = {
       body: {
