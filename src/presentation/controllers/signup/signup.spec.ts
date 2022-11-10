@@ -18,7 +18,6 @@ const makeEmailValidator = (): EmailValidator => {
 
   return new EmailValidatorStub()
 }
-// [ ] criar interfaces: aula 3 parte 5. integrando com o AddAccount Usecase 15:30
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
