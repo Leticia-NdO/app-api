@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1668687319556" clover="3.2.0">
-  <project timestamp="1668687319556" name="All files">
+<coverage generated="1668687651138" clover="3.2.0">
+  <project timestamp="1668687651138" name="All files">
     <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="17" coveredelements="17" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
     <file name="bcrypt-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/cryptograph/bcrypt-adapter.ts">
       <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
