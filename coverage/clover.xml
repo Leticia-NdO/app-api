@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1668684303200" clover="3.2.0">
-  <project timestamp="1668684303201" name="All files">
-    <metrics statements="28" coveredstatements="24" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="2" elements="37" coveredelements="31" complexity="0" loc="28" ncloc="28" packages="1" files="2" classes="2"/>
+<coverage generated="1668684855886" clover="3.2.0">
+  <project timestamp="1668684855886" name="All files">
+    <metrics statements="21" coveredstatements="17" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="2" elements="29" coveredelements="23" complexity="0" loc="21" ncloc="21" packages="1" files="2" classes="2"/>
     <file name="db-add-account-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/usecases/add-account/db-add-account-protocols.ts">
       <metrics statements="4" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -10,7 +10,7 @@
       <line num="4" count="0" type="stmt"/>
     </file>
     <file name="db-add-account.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/usecases/add-account/db-add-account.ts">
-      <metrics statements="24" coveredstatements="24" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -18,23 +18,16 @@
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
       <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="8" count="4" type="stmt"/>
-      <line num="9" count="4" type="stmt"/>
-      <line num="10" count="4" type="stmt"/>
+      <line num="8" count="5" type="stmt"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="5" type="stmt"/>
       <line num="11" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="stmt"/>
+      <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="13" count="5" type="stmt"/>
+      <line num="14" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="3" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="20" count="4" type="stmt"/>
-      <line num="21" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="22" count="2" type="cond" truecount="1" falsecount="0"/>
-      <line num="23" count="2" type="stmt"/>
-      <line num="24" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
