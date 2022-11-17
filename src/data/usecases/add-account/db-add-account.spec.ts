@@ -16,13 +16,7 @@ const makeEncrypter = (): Encrypter => {
 const makeAddAccountRepository = (): AddAccountRepository => {
   class AddAccountRepositoryStub implements AddAccountRepository {
     async add (accountData: AddAccountModel): Promise<AccountModel> {
-      const fakeAccount = {
-        id: 'string',
-        name: 'string',
-        email: 'string',
-        password: 'hashed_password'
-      }
-      return await new Promise(resolve => resolve(fakeAccount))
+      return await new Promise(resolve => resolve(Object.assign({}, accountData, { id: 'valid_id' })))
     }
   }
 
@@ -104,5 +98,23 @@ describe('DbAddAccount Usecase', () => {
 
     // se o repositório dentro do add retornar uma exceção eu quero que o add simplesmente retorne essa exceção e não a trate, pois isso é dever da camada de presentation (os controllers)
     await expect(promise).rejects.toThrow() // vamos desdobrar a promise com o rejects
+  })
+
+  it('Should return an account on success', async () => {
+    const { sut } = makeSut()
+    const accountData = {
+      name: 'valid_name',
+      email: 'valid_email',
+      password: 'valid_password'
+    }
+    const response = await sut.add(accountData) // sem await o sut.add retorna uma promise
+
+    // se o repositório dentro do add retornar uma exceção eu quero que o add simplesmente retorne essa exceção e não a trate, pois isso é dever da camada de presentation (os controllers)
+    expect(response).toEqual({
+      id: 'valid_id',
+      name: 'valid_name',
+      email: 'valid_email',
+      password: 'hashed_password'
+    }) // vamos desdobrar a promise com o rejects
   })
 })
