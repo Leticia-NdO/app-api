@@ -11,7 +11,10 @@ describe('Account Mondo Repository', () => {
     await MongoHelper.disconnect()
   })
 
-  beforeEach
+  beforeEach(async () => {
+    const accountCollection = MongoHelper.getCollection('accounts')
+    await accountCollection.deleteMany({}) // se passarmos um objeto vazio todos os registros dessa collection vão ser deletados
+  })
 
   const makeSut = (): AccountMongoRepository => {
     return new AccountMongoRepository()
