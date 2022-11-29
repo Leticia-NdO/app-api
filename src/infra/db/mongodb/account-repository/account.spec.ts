@@ -4,7 +4,7 @@ import { AccountMongoRepository } from './account'
 describe('Account Mondo Repository', () => {
   // Quando fazemos testes com bancos de dados é necessário conectar-se ao db antes dos testes e desconectar depois.
   beforeAll(async () => {
-    await MongoHelper.connect()
+    await MongoHelper.connect(process.env.MONGO_URL as string)
   })
 
   afterAll(async () => {
@@ -12,7 +12,7 @@ describe('Account Mondo Repository', () => {
   })
 
   beforeEach(async () => {
-    const accountCollection = MongoHelper.getCollection('accounts')
+    const accountCollection = await MongoHelper.getCollection('accounts')
     await accountCollection.deleteMany({}) // se passarmos um objeto vazio todos os registros dessa collection vão ser deletados
   })
 
