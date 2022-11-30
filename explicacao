@@ -1,0 +1,7 @@
+1. a rota vai acionar o controller (camada de presentation)
+	o controller verifica se os valores são validos, caso não sejam
+	retorna os erros apropriados (aqui acontece o tratamento de erro)
+2. o controller chama o use-case (camada de data)
+	o use-case trata os dados para serem enviados para o db
+3. o use-case chama o repository (camada de infra)
+	o repository insere o dado no banco de dados
