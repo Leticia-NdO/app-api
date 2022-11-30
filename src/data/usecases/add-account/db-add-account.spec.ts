@@ -11,6 +11,14 @@ const makeEncrypter = (): Encrypter => {
   return new EncrypterStub()
 }
 
+const makeFakeAccount = (): AddAccountModel => {
+  return {
+    name: 'valid_name',
+    email: 'valid_email',
+    password: 'valid_password'
+  }
+}
+
 const makeAddAccountRepository = (): AddAccountRepository => {
   class AddAccountRepositoryStub implements AddAccountRepository {
     async add (accountData: AddAccountModel): Promise<AccountModel> {
@@ -43,11 +51,7 @@ describe('DbAddAccount Usecase', () => {
   it('Should call Encrypter with correct password', async () => {
     const { sut, encrypterStub } = makeSut()
     const encryptSpy = jest.spyOn(encrypterStub, 'encrypt')
-    const accountData = {
-      name: 'valid_name',
-      email: 'valid_email',
-      password: 'valid_password'
-    }
+    const accountData = makeFakeAccount()
     await sut.add(accountData)
 
     expect(encryptSpy).toHaveBeenCalledWith('valid_password')
