@@ -12,6 +12,7 @@ const makeControllerStub = (): Controller => {
       return await new Promise(resolve => resolve({
         statusCode: 200,
         body: {
+          name: 'valid'
         }
       }))
     }
@@ -39,5 +40,24 @@ describe('LogControllerDecorator', () => {
     }
     await sut.handle(httpRequest)
     expect(sutHandleMethod).toHaveBeenCalledWith(httpRequest)
+  })
+
+  it('Should return same result of the controller', async () => {
+    const { sut } = makeSut()
+    const httpRequest = {
+      body: {
+        email: '',
+        name: '',
+        password: '',
+        passwordConfirmation: ''
+      }
+    }
+    const result = await sut.handle(httpRequest)
+    expect(result).toEqual({
+      statusCode: 200,
+      body: {
+        name: 'valid'
+      }
+    })
   })
 })

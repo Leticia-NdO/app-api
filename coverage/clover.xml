@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669825718479" clover="3.2.0">
-  <project timestamp="1669825718479" name="All files">
+<coverage generated="1669827607685" clover="3.2.0">
+  <project timestamp="1669827607685" name="All files">
     <metrics statements="16" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="2" elements="22" coveredelements="17" complexity="0" loc="16" ncloc="16" packages="2" files="2" classes="2"/>
     <package name="main.decorators">
       <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -12,12 +12,12 @@
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
       </file>
     </package>
