@@ -2,6 +2,7 @@ import { SignUpController } from './signup'
 import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
 import { EmailValidator, Validation, AccountModel, AddAccount, AddAccountModel, HttpRequest } from '../signup/signup-protocols'
 import { badRequest, ok, serverError } from '../../helpers/http-helper'
+import { ValidationResult } from '../../helpers/validators/validation-result'
 
 interface SutTypes {
   sut: SignUpController
@@ -51,8 +52,10 @@ const makeAddAccount = (): AddAccount => {
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {
-    validate (input: any): boolean {
-      return true
+    validate (input: any): ValidationResult {
+      return {
+        isValid: true
+      }
     }
   }
 
@@ -184,5 +187,19 @@ describe('SignUp Controller', () => {
     const httpRequest = makeFakeRequest()
     await sut.handle(httpRequest)
     expect(validateSpy).toHaveBeenCalledWith(httpRequest.body)
+  })
+
+  it('Should return 400 if Validation doesn`t return true', async () => {
+    // forçando o EmailValidator a retornar uma exceção pra ser como o try catch vai se comportar
+    const { sut, validationStub } = makeSut()
+
+    jest.spyOn(validationStub, 'validate').mockReturnValueOnce({
+      isValid: false,
+      error: new MissingParamError('any_field')
+    })
+
+    const httpRequest = makeFakeRequest()
+    const httpResponse = await sut.handle(httpRequest)
+    expect(httpResponse).toEqual(badRequest(new MissingParamError('any_field')))
   })
 })
