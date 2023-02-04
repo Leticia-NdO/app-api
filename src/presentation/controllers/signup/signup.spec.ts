@@ -1,12 +1,11 @@
 import { SignUpController } from './signup'
-import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
-import { EmailValidator, Validation, AccountModel, AddAccount, AddAccountModel, HttpRequest } from '../signup/signup-protocols'
+import { MissingParamError } from '../../errors'
+import { Validation, AccountModel, AddAccount, AddAccountModel, HttpRequest } from '../signup/signup-protocols'
 import { badRequest, ok, serverError } from '../../helpers/http-helper'
 import { ValidationResult } from '../../helpers/validators/validation-result'
 
 interface SutTypes {
   sut: SignUpController
-  emailValidatorStub: EmailValidator
   addAccountStub: AddAccount
   validationStub: Validation
 }
@@ -27,17 +26,6 @@ const makeFakeRequest = (): HttpRequest => (
     }
   }
 )
-
-const makeEmailValidator = (): EmailValidator => {
-  class EmailValidatorStub implements EmailValidator {
-    // stub é um test double, uma função que tem retorno pré definido. É uma boa prática iniciar o mock com valor positivo
-    isValid (email: string): boolean {
-      return true
-    }
-  }
-
-  return new EmailValidatorStub()
-}
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
@@ -63,49 +51,17 @@ const makeValidation = (): Validation => {
 }
 
 const makeSut = (): SutTypes => {
-  const emailValidatorStub = makeEmailValidator()
   const addAccountStub = makeAddAccount()
   const validationStub = makeValidation()
-  const sut = new SignUpController(emailValidatorStub, addAccountStub, validationStub)
+  const sut = new SignUpController(addAccountStub, validationStub)
   return {
     sut,
-    emailValidatorStub,
     addAccountStub,
     validationStub
   }
 }
 
 describe('SignUp Controller', () => {
-  it('Should return 400 if an invalid email is provided', async () => {
-    const { sut, emailValidatorStub } = makeSut() // sut = system under test
-    jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false) // para inverter o resultado do stub
-    const httpRequest = makeFakeRequest()
-    const httpResponse = await sut.handle(httpRequest)
-    expect(httpResponse).toEqual(badRequest(new InvalidParamError('email')))
-  })
-
-  it('Should call email validator with correct email', async () => {
-    const { sut, emailValidatorStub } = makeSut() // sut = system under test
-    const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
-    const httpRequest = makeFakeRequest()
-    await sut.handle(httpRequest)
-    expect(isValidSpy).toHaveBeenCalledWith('any_email@mail.com')
-  })
-
-  it('Should return 500 if EmailValidator throws', async () => {
-    // forçando o EmailValidator a retornar uma exceção pra ser como o try catch vai se comportar
-    const { sut, emailValidatorStub } = makeSut()
-
-    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => {
-      throw new Error('error')
-    })
-
-    const httpRequest = makeFakeRequest()
-    const httpResponse = await sut.handle(httpRequest)
-    expect(httpResponse.statusCode).toBe(500)
-    expect(httpResponse.body).toEqual(new ServerError('error'))
-  })
-
   it('Should call AddAccount with correct values', async () => {
     const { sut, addAccountStub } = makeSut() // sut = system under test
     const addSpy = jest.spyOn(addAccountStub, 'add')
