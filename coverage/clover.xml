@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675534765090" clover="3.2.0">
-  <project timestamp="1675534765090" name="All files">
-    <metrics statements="541" coveredstatements="502" conditionals="78" coveredconditionals="70" methods="49" coveredmethods="42" elements="668" coveredelements="614" complexity="0" loc="541" ncloc="541" packages="23" files="48" classes="48"/>
+<coverage generated="1675535527931" clover="3.2.0">
+  <project timestamp="1675535527931" name="All files">
+    <metrics statements="542" coveredstatements="507" conditionals="77" coveredconditionals="70" methods="48" coveredmethods="42" elements="667" coveredelements="619" complexity="0" loc="542" ncloc="542" packages="23" files="48" classes="48"/>
     <package name="data.protocols">
       <metrics statements="12" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="add-account-repository.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/add-account-repository.ts">
@@ -411,15 +411,14 @@
       </file>
     </package>
     <package name="presentation.controllers.login">
-      <metrics statements="36" coveredstatements="36" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+      <metrics statements="35" coveredstatements="35" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
       <file name="login-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/login-protocols.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
       </file>
       <file name="login.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/login.ts">
         <metrics statements="30" coveredstatements="30" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
@@ -456,15 +455,14 @@
       </file>
     </package>
     <package name="presentation.controllers.signup">
-      <metrics statements="40" coveredstatements="40" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <metrics statements="39" coveredstatements="39" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <file name="signup-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/signup/signup-protocols.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
       </file>
       <file name="signup.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/signup/signup.ts">
         <metrics statements="34" coveredstatements="34" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
@@ -551,9 +549,9 @@
         <line num="6" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="presentation.helpers">
+    <package name="presentation.helpers.http">
       <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-      <file name="http-helper.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/http-helper.ts">
+      <file name="http-helper.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/http/http-helper.ts">
         <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -579,7 +577,7 @@
       </file>
     </package>
     <package name="presentation.helpers.validators">
-      <metrics statements="109" coveredstatements="105" conditionals="18" coveredconditionals="17" methods="9" coveredmethods="8"/>
+      <metrics statements="100" coveredstatements="100" conditionals="17" coveredconditionals="17" methods="8" coveredmethods="8"/>
       <file name="compare-fields-validation.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/validators/compare-fields-validation.ts">
         <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
@@ -692,24 +690,9 @@
         <line num="20" count="2" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
       </file>
-      <file name="validation-result.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/validators/validation-result.ts">
-        <metrics statements="4" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-      </file>
-      <file name="validation.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/validators/validation.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-      </file>
     </package>
     <package name="presentation.protocols">
-      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="controller.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/protocols/controller.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -736,10 +719,28 @@
         <line num="8" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/protocols/index.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="validation-result.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/protocols/validation-result.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="validation.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/protocols/validation.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
       </file>
     </package>
     <package name="utils">
