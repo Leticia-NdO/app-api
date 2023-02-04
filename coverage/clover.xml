@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675535527931" clover="3.2.0">
-  <project timestamp="1675535527931" name="All files">
-    <metrics statements="542" coveredstatements="507" conditionals="77" coveredconditionals="70" methods="48" coveredmethods="42" elements="667" coveredelements="619" complexity="0" loc="542" ncloc="542" packages="23" files="48" classes="48"/>
+<coverage generated="1675535909628" clover="3.2.0">
+  <project timestamp="1675535909628" name="All files">
+    <metrics statements="543" coveredstatements="508" conditionals="77" coveredconditionals="70" methods="48" coveredmethods="42" elements="668" coveredelements="620" complexity="0" loc="543" ncloc="543" packages="23" files="49" classes="49"/>
     <package name="data.protocols">
       <metrics statements="12" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="add-account-repository.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/add-account-repository.ts">
@@ -318,27 +318,24 @@
       </file>
     </package>
     <package name="main.factories.signup">
-      <metrics statements="36" coveredstatements="36" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <metrics statements="33" coveredstatements="33" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="signup-validation.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/factories/signup/signup-validation.ts">
-        <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="20" type="stmt"/>
-        <line num="12" count="20" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
         <line num="13" count="5" type="stmt"/>
         <line num="14" count="5" type="stmt"/>
         <line num="15" count="5" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="17" count="5" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
       </file>
       <file name="signup.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/factories/signup/signup.ts">
         <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
@@ -577,7 +574,7 @@
       </file>
     </package>
     <package name="presentation.helpers.validators">
-      <metrics statements="100" coveredstatements="100" conditionals="17" coveredconditionals="17" methods="8" coveredmethods="8"/>
+      <metrics statements="104" coveredstatements="104" conditionals="17" coveredconditionals="17" methods="8" coveredmethods="8"/>
       <file name="compare-fields-validation.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/validators/compare-fields-validation.ts">
         <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
@@ -641,6 +638,13 @@
         <line num="25" count="2" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/validators/index.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
       <file name="required-fields-validation.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/validators/required-fields-validation.ts">
         <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
