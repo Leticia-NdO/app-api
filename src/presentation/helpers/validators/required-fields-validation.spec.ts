@@ -10,9 +10,13 @@ const makeFakeInput = (): any => {
   }
 }
 
+const makeSut = (): RequiredFieldValidation => {
+  return new RequiredFieldValidation('field')
+}
+
 describe('Required Fields Validation', () => {
   it('Should return a missing param error if validation fails', () => {
-    const sut = new RequiredFieldValidation('field')
+    const sut = makeSut()
     const res = sut.validate(makeFakeInput())
     expect(res).toEqual({
       isValid: false,
@@ -21,8 +25,8 @@ describe('Required Fields Validation', () => {
   })
 
   it('Should return isValid true if validation succeeds', () => {
-    const sut = new RequiredFieldValidation('email')
-    const res = sut.validate(makeFakeInput())
+    const sut = makeSut()
+    const res = sut.validate({ field: 'any_field' })
     expect(res).toEqual({
       isValid: true
     })
