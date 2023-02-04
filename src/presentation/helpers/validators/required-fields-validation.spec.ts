@@ -19,4 +19,12 @@ describe('Required Fields Validation', () => {
       error: new MissingParamError('field')
     })
   })
+
+  it('Should return isValid true if validation succeeds', () => {
+    const sut = new RequiredFieldValidation('email')
+    const res = sut.validate(makeFakeInput())
+    expect(res).toEqual({
+      isValid: true
+    })
+  })
 })
