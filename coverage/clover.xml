@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675538593360" clover="3.2.0">
-  <project timestamp="1675538593361" name="All files">
-    <metrics statements="23" coveredstatements="14" conditionals="5" coveredconditionals="3" methods="4" coveredmethods="2" elements="32" coveredelements="19" complexity="0" loc="23" ncloc="23" packages="3" files="3" classes="3"/>
-    <package name="protocols">
-      <metrics statements="5" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="load-account-by-email-repository.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/load-account-by-email-repository.ts">
+<coverage generated="1675883283604" clover="3.2.0">
+  <project timestamp="1675883283605" name="All files">
+    <metrics statements="124" coveredstatements="88" conditionals="17" coveredconditionals="11" methods="18" coveredmethods="9" elements="159" coveredelements="108" complexity="0" loc="124" ncloc="124" packages="10" files="12" classes="12"/>
+    <package name="data.protocols.criptography">
+      <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="encrypter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/criptography/encrypter.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="data.protocols.db">
+      <metrics statements="14" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="add-account-repository.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/db/add-account-repository.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="load-account-by-email-repository.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/db/load-account-by-email-repository.ts">
         <metrics statements="5" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="2" count="0" type="stmt"/>
@@ -12,8 +30,14 @@
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
       </file>
+      <file name="log-error-repository.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/db/log-error-repository.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
     </package>
-    <package name="usecases.add-account">
+    <package name="data.usecases.add-account">
       <metrics statements="4" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="db-add-account-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/usecases/add-account/db-add-account-protocols.ts">
         <metrics statements="4" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -23,7 +47,7 @@
         <line num="4" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="usecases.authentication">
+    <package name="data.usecases.authentication">
       <metrics statements="14" coveredstatements="14" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="db-authentication.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/usecases/authentication/db-authentication.ts">
         <metrics statements="14" coveredstatements="14" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
@@ -41,6 +65,131 @@
         <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.cryptograph">
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="bcrypt-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/cryptograph/bcrypt-adapter.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.db.mongodb.account-repository">
+      <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="account.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/db/mongodb/account-repository/account.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.db.mongodb.log-repository">
+      <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="log.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/db/mongodb/log-repository/log.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.decorators">
+      <metrics statements="21" coveredstatements="21" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="log.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/decorators/log.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="presentation.helpers.http">
+      <metrics statements="21" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="1"/>
+      <file name="http-helper.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/helpers/http/http-helper.ts">
+        <metrics statements="21" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="presentation.protocols">
+      <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/protocols/index.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
       </file>
     </package>
   </project>
