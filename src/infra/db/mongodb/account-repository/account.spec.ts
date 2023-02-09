@@ -70,4 +70,20 @@ describe('Account Mondo Repository', () => {
 
     expect(account).toBeFalsy()
   })
+
+  it('Should update the account accessToken on updateAccessToken success', async () => {
+    const sut = makeSut()
+
+    const result = await accountCollection.insertOne({
+      email: 'any_email@email.com',
+      name: 'any_name',
+      password: 'any_password'
+    })
+
+    await sut.updateAccessToken(result.insertedId.toString(), 'any_token')
+    const account = await accountCollection.findOne({ email: 'any_email@email.com' })
+
+    expect(account).toBeTruthy()
+    expect(account?.accessToken).toEqual('any_token')
+  })
 })
