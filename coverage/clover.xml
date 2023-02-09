@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675974815322" clover="3.2.0">
-  <project timestamp="1675974815322" name="All files">
-    <metrics statements="607" coveredstatements="552" conditionals="93" coveredconditionals="81" methods="56" coveredmethods="45" elements="756" coveredelements="678" complexity="0" loc="607" ncloc="607" packages="25" files="55" classes="55"/>
+<coverage generated="1675975150498" clover="3.2.0">
+  <project timestamp="1675975150499" name="All files">
+    <metrics statements="608" coveredstatements="552" conditionals="94" coveredconditionals="81" methods="57" coveredmethods="45" elements="759" coveredelements="678" complexity="0" loc="608" ncloc="608" packages="26" files="56" classes="56"/>
     <package name="data.protocols.criptography">
       <metrics statements="9" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="encrypter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/criptography/encrypter.ts">
@@ -174,8 +174,15 @@
       </file>
     </package>
     <package name="infra.cryptograph">
+      <metrics statements="1" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="jwt-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/cryptograph/jwt-adapter.ts">
+        <metrics statements="1" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+      </file>
+    </package>
+    <package name="infra.cryptograph.bcrypt">
       <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="bcrypt-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/cryptograph/bcrypt-adapter.ts">
+      <file name="bcrypt-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/cryptograph/bcrypt/bcrypt-adapter.ts">
         <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
