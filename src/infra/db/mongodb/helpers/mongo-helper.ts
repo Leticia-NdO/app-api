@@ -20,9 +20,15 @@ export const MongoHelper = {
     return this.client.db().collection(name)
   },
 
-  map (collection: any, _id: string): any {
-    delete collection._id
-    return Object.assign({}, collection, { id: _id })
+  map (collection: any, id?: string): any {
+    if (id) {
+      delete collection._id
+      return Object.assign({}, collection, { id })
+    } else {
+      const id = (Object.assign({}, collection))._id
+      delete collection._id
+      return Object.assign({}, collection, { id })
+    }
   }
 
 }
