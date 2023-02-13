@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676320820173" clover="3.2.0">
-  <project timestamp="1676320820174" name="All files">
-    <metrics statements="588" coveredstatements="533" conditionals="100" coveredconditionals="88" methods="60" coveredmethods="49" elements="748" coveredelements="670" complexity="0" loc="588" ncloc="588" packages="27" files="56" classes="56"/>
+<coverage generated="1676321700379" clover="3.2.0">
+  <project timestamp="1676321700379" name="All files">
+    <metrics statements="587" coveredstatements="532" conditionals="100" coveredconditionals="88" methods="60" coveredmethods="49" elements="747" coveredelements="669" complexity="0" loc="587" ncloc="587" packages="27" files="56" classes="56"/>
     <package name="data.protocols.criptography">
       <metrics statements="9" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="encrypter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/data/protocols/criptography/encrypter.ts">
@@ -315,9 +315,9 @@
         <line num="11" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="main.adapters">
+    <package name="main.adapters.express">
       <metrics statements="17" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="express-route-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/adapters/express-route-adapter.ts">
+      <file name="express-route-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/adapters/express/express-route-adapter.ts">
         <metrics statements="17" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -336,6 +336,20 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.adapters.validators">
+      <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="email-validator-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/adapters/validators/email-validator-adapter.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
       </file>
     </package>
     <package name="main.config">
@@ -426,7 +440,7 @@
       </file>
     </package>
     <package name="main.factories.signup">
-      <metrics statements="33" coveredstatements="33" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <metrics statements="32" coveredstatements="32" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="signup-factory.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/factories/signup/signup-factory.ts">
         <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -449,22 +463,21 @@
         <line num="18" count="4" type="stmt"/>
       </file>
       <file name="signup-validation-factory.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/factories/signup/signup-validation-factory.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="20" type="stmt"/>
         <line num="8" count="20" type="stmt"/>
-        <line num="9" count="20" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
         <line num="10" count="5" type="stmt"/>
         <line num="11" count="5" type="stmt"/>
         <line num="12" count="5" type="stmt"/>
         <line num="13" count="5" type="stmt"/>
         <line num="14" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
       </file>
     </package>
     <package name="main.middlewares">
@@ -823,20 +836,6 @@
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="utils">
-      <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="email-validator-adapter.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/utils/email-validator-adapter.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
       </file>
     </package>
   </project>
