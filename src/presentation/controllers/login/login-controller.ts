@@ -1,4 +1,4 @@
-import { Authentication, Validation, ok, badRequest, serverError, unauthorized, Controller, HttpRequest, HttpResponse } from './login-protocols'
+import { Authentication, Validation, ok, badRequest, serverError, unauthorized, Controller, HttpRequest, HttpResponse } from './login-controller-protocols'
 
 export class LoginController implements Controller {
   private readonly authentication: Authentication

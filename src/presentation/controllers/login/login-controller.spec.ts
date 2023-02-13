@@ -1,5 +1,5 @@
-import { Authentication, AuthenticationModel, Validation, MissingParamError, badRequest, serverError, ok, unauthorized, HttpRequest } from './login-protocols'
-import { LoginController } from './login'
+import { Authentication, AuthenticationModel, Validation, MissingParamError, badRequest, serverError, ok, unauthorized, HttpRequest } from './login-controller-protocols'
+import { LoginController } from './login-controller'
 import { ValidationResult } from '../../protocols/validation-result'
 
 interface SutTypes {
