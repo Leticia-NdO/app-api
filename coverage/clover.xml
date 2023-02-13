@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676321700379" clover="3.2.0">
-  <project timestamp="1676321700379" name="All files">
+<coverage generated="1676324438839" clover="3.2.0">
+  <project timestamp="1676324438839" name="All files">
     <metrics statements="587" coveredstatements="532" conditionals="100" coveredconditionals="88" methods="60" coveredmethods="49" elements="747" coveredelements="669" complexity="0" loc="587" ncloc="587" packages="27" files="56" classes="56"/>
     <package name="data.protocols.criptography">
       <metrics statements="9" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
@@ -517,7 +517,7 @@
     </package>
     <package name="main.routes">
       <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="signup-routes.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/routes/signup-routes.ts">
+      <file name="login-routes.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/main/routes/login-routes.ts">
         <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
