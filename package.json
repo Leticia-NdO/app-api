@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sucrase-node src/main/server.ts",
+    "start": "node dist/main/server.js",
+    "build": "tsc",
+    "dev": "sucrase-node src/main/server.ts",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
