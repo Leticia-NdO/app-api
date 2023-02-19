@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "tsc",
-    "dev": "sucrase-node src/main/server.ts",
+    "up": "npm run build && sudo docker-compose up -d",
+    "stop": "sudo docker-compose down",
     "pre-commit": "lint-staged",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
@@ -33,7 +34,6 @@
     "husky": "^8.0.1",
     "jest": "^29.2.2",
     "lint-staged": "^13.0.3",
-    "sucrase": "^3.29.0",
     "supertest": "^6.3.1",
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4"
