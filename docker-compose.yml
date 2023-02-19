@@ -14,9 +14,9 @@ services:
     image: clean-node-api
     restart: always
     volumes:
-      - ./dist:/usr/app/clean-node-api/dist
+      - ./dist/:/usr/app/clean-node-api/dist/
       - ./package.json:/usr/app/clean-node-api/package.json
-    command: npm start
+    command: bash -c "npm install --omit=dev && npm start"
     ports:
       - "5050:5050"
     links:
