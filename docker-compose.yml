@@ -15,6 +15,7 @@ services:
     restart: always
     volumes:
       - ./dist:/usr/app/clean-node-api/dist
+      - ./package.json:/usr/app/clean-node-api/package.json
     command: npm start
     ports:
       - "5050:5050"
