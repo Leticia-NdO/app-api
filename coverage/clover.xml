@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676841296729" clover="3.2.0">
-  <project timestamp="1676841296730" name="All files">
+<coverage generated="1676845696604" clover="3.2.0">
+  <project timestamp="1676845696605" name="All files">
     <metrics statements="617" coveredstatements="570" conditionals="105" coveredconditionals="92" methods="60" coveredmethods="50" elements="782" coveredelements="712" complexity="0" loc="617" ncloc="617" packages="27" files="57" classes="57"/>
     <package name="data.protocols.criptography">
       <metrics statements="9" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
