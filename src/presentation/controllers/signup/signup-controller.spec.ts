@@ -149,4 +149,17 @@ describe('SignUp Controller', () => {
 
     expect(authSpy).toHaveBeenCalledWith({ email: httpRequest.body.email, password: httpRequest.body.password })
   })
+
+  it('Should return 500 if Authentication throws', async () => {
+    const httpRequest = makeHttpRequest()
+    const { sut, authenticationStub } = makeSut()
+
+    jest.spyOn(authenticationStub, 'auth').mockImplementationOnce(({ email: string }) => {
+      throw new Error('error')
+    })
+
+    const res = await sut.handle(httpRequest)
+
+    expect(res).toEqual(serverError(new Error('error')))
+  })
 })
