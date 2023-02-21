@@ -918,7 +918,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src/presentation/controllers/login/login-controller-protocols.ts
+SF:src/presentation/controllers/login/login/login-controller-protocols.ts
 FNF:0
 FNH:0
 DA:1,1
@@ -932,7 +932,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/presentation/controllers/login/login-controller.ts
+SF:src/presentation/controllers/login/login/login-controller.ts
 FN:4,LoginController
 FN:6,handle
 FNF:2
@@ -979,7 +979,7 @@ BRF:9
 BRH:9
 end_of_record
 TN:
-SF:src/presentation/controllers/signup/signup-controller-protocols.ts
+SF:src/presentation/controllers/login/signup/signup-controller-protocols.ts
 FNF:0
 FNH:0
 DA:1,1
@@ -994,7 +994,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/presentation/controllers/signup/signup-controller.ts
+SF:src/presentation/controllers/login/signup/signup-controller.ts
 FN:6,SignUpController
 FN:11,handle
 FNF:2

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677002765883" clover="3.2.0">
-  <project timestamp="1677002765883" name="All files">
+<coverage generated="1677003422748" clover="3.2.0">
+  <project timestamp="1677003422748" name="All files">
     <metrics statements="663" coveredstatements="611" conditionals="118" coveredconditionals="104" methods="66" coveredmethods="55" elements="847" coveredelements="770" complexity="0" loc="663" ncloc="663" packages="31" files="61" classes="61"/>
     <package name="data.protocols.criptography">
       <metrics statements="9" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
@@ -601,9 +601,9 @@
         <line num="10" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="presentation.controllers.login">
+    <package name="presentation.controllers.login.login">
       <metrics statements="30" coveredstatements="30" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
-      <file name="login-controller-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/login-controller-protocols.ts">
+      <file name="login-controller-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/login/login-controller-protocols.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -611,7 +611,7 @@
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
-      <file name="login-controller.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/login-controller.ts">
+      <file name="login-controller.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/login/login-controller.ts">
         <metrics statements="25" coveredstatements="25" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -640,9 +640,9 @@
         <line num="25" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="presentation.controllers.signup">
+    <package name="presentation.controllers.login.signup">
       <metrics statements="47" coveredstatements="47" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
-      <file name="signup-controller-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/signup/signup-controller-protocols.ts">
+      <file name="signup-controller-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/signup/signup-controller-protocols.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -651,7 +651,7 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="signup-controller.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/signup/signup-controller.ts">
+      <file name="signup-controller.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/login/signup/signup-controller.ts">
         <metrics statements="41" coveredstatements="41" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
