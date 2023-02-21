@@ -90,4 +90,12 @@ describe('AddSurvey Controller', () => {
 
     expect(response.statusCode).toEqual(500)
   })
+
+  it('Should return 204 on success', async () => {
+    const { sut } = makeSut()
+    const httpRequest = makeFakeRequest()
+    const response = await sut.handle(httpRequest)
+
+    expect(response.statusCode).toEqual(204)
+  })
 })
