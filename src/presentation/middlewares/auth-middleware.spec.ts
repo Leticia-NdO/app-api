@@ -82,4 +82,13 @@ describe('Auth Middleware', () => {
 
     expect(response).toEqual(ok({ accountId: 'any_id' }))
   })
+
+  it('Should return 500 if LoadAccountByToken throws', async () => {
+    const { sut, loadAccountByTokenStub } = makeSut()
+    jest.spyOn(loadAccountByTokenStub, 'load').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
+    const httpRequest: HttpRequest = makeFakeRequest()
+    const response = await sut.handle(httpRequest)
+
+    expect(response.statusCode).toEqual(500)
+  })
 })
