@@ -79,4 +79,15 @@ describe('AddSurvey Controller', () => {
 
     expect(addSpy).toBeCalledWith(httpRequest.body)
   })
+
+  it('Should return 500 if AddSurvey throws', async () => {
+    const { sut, addSurveyStub } = makeSut()
+    jest.spyOn(addSurveyStub, 'add').mockReturnValueOnce(new Promise((resolve, reject) => {
+      reject(new Error())
+    }))
+    const httpRequest = makeFakeRequest()
+    const response = await sut.handle(httpRequest)
+
+    expect(response.statusCode).toEqual(500)
+  })
 })
