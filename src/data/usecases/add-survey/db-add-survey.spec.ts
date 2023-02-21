@@ -41,4 +41,14 @@ describe('DbAddSurvey', () => {
 
     expect(addSpy).toHaveBeenCalledWith(makeFakeAddSurveyModel())
   })
+
+  it('Should throw if AddSurveyRepository throws', async () => {
+    const { sut, addSurveyRepositoryStub } = makeSut()
+    jest.spyOn(addSurveyRepositoryStub, 'add').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
+    const accountData = makeFakeAddSurveyModel()
+    const promise = sut.add(accountData) // sem await o sut.add retorna uma promise
+
+    // se o repositório dentro do add retornar uma exceção eu quero que o add simplesmente retorne essa exceção e não a trate, pois isso é dever da camada de presentation (os controllers)
+    await expect(promise).rejects.toThrow() // vamos desdobrar a promise com o rejects
+  })
 })
