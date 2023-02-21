@@ -1,6 +1,6 @@
 import { Validation } from '../../../protocols'
-import { badRequest, serverError } from '../../login/login/login-controller-protocols'
-import { Controller, HttpRequest, HttpResponse, ok, AddSurvey } from './add-survey-protocols'
+import { badRequest, noContent, serverError } from '../../login/login/login-controller-protocols'
+import { Controller, HttpRequest, HttpResponse, AddSurvey } from './add-survey-protocols'
 
 export class AddSurveyController implements Controller {
   constructor (
@@ -21,7 +21,7 @@ export class AddSurveyController implements Controller {
         question,
         answers
       })
-      return ok('')
+      return noContent()
     } catch (error) {
       return serverError(error)
     }
