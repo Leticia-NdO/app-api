@@ -102,4 +102,13 @@ describe('DbLoadAccountByToken UseCase', () => {
     // se o repositório dentro do add retornar uma exceção eu quero que o add simplesmente retorne essa exceção e não a trate, pois isso é dever da camada de presentation (os controllers)
     await expect(response).rejects.toThrow() // vamos desdobrar a promise com o rejects
   })
+
+  it('Should throw if LoadAccountByTokenRepository throws', async () => {
+    const { sut, loadAccountByTokenRepository } = makeSut()
+    jest.spyOn(loadAccountByTokenRepository, 'loadByToken').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error()))) // sem await o sut.add retorna uma promise
+    const response = sut.load('any_token', 'any_role')
+
+    // se o repositório dentro do add retornar uma exceção eu quero que o add simplesmente retorne essa exceção e não a trate, pois isso é dever da camada de presentation (os controllers)
+    await expect(response).rejects.toThrow() // vamos desdobrar a promise com o rejects
+  })
 })
