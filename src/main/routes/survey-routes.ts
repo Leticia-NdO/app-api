@@ -6,6 +6,6 @@ import { makeLogControllerDecorator } from '../factories/decorators/log-controll
 import { makeAuthMiddleware } from '../factories/middlewares/auth-middleware-factory'
 
 export default (router: Router): void => {
-  const adminAuth = adaptMiddleware(makeAuthMiddleware('admin'))
+  const adminAuth = adaptMiddleware(makeAuthMiddleware())
   router.post('/surveys', adminAuth, adaptRoute(makeLogControllerDecorator(makeAddSurveyController())))
 }
