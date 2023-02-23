@@ -57,7 +57,6 @@ describe('Survey Routes', () => {
           accessToken
         }
       })
-
       await request(app).post('/api/v1/surveys')
         .set('x-access-token', accessToken)
         .send({
