@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677178873615" clover="3.2.0">
-  <project timestamp="1677178873615" name="All files">
-    <metrics statements="77" coveredstatements="75" conditionals="12" coveredconditionals="11" methods="8" coveredmethods="8" elements="97" coveredelements="94" complexity="0" loc="77" ncloc="77" packages="2" files="2" classes="2"/>
+<coverage generated="1677178994252" clover="3.2.0">
+  <project timestamp="1677178994253" name="All files">
+    <metrics statements="77" coveredstatements="75" conditionals="13" coveredconditionals="12" methods="8" coveredmethods="8" elements="98" coveredelements="95" complexity="0" loc="77" ncloc="77" packages="2" files="2" classes="2"/>
     <package name="account">
-      <metrics statements="43" coveredstatements="43" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+      <metrics statements="43" coveredstatements="43" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
       <file name="account-mongo-repository.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/infra/db/mongodb/account/account-mongo-repository.ts">
-        <metrics statements="43" coveredstatements="43" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+        <metrics statements="43" coveredstatements="43" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -43,11 +43,11 @@
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="42" count="3" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
       </file>
     </package>
@@ -71,10 +71,10 @@
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="12" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="14" type="cond" truecount="0" falsecount="1"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="20" count="12" type="stmt"/>
+        <line num="20" count="14" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="cond" truecount="1" falsecount="0"/>
