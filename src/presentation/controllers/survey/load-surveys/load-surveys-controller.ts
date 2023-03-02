@@ -1,4 +1,4 @@
-import { noContent } from '../../login/login/login-controller-protocols'
+import { ok } from '../../login/login/login-controller-protocols'
 import { Controller, HttpRequest, HttpResponse, LoadSurveys } from './load-surveys-protocols'
 
 export class LoadSurveysController implements Controller {
@@ -7,7 +7,7 @@ export class LoadSurveysController implements Controller {
   }
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
-    await this.loadSurveys.load()
-    return noContent()
+    const surveys = await this.loadSurveys.load()
+    return ok(surveys)
   }
 }

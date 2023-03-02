@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677788509657" clover="3.2.0">
-  <project timestamp="1677788509658" name="All files">
-    <metrics statements="17" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="2" elements="23" coveredelements="17" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
+<coverage generated="1677788723950" clover="3.2.0">
+  <project timestamp="1677788723951" name="All files">
+    <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3" elements="23" coveredelements="23" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
     <file name="load-surveys-controller.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/survey/load-surveys/load-surveys-controller.ts">
       <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
@@ -9,21 +9,21 @@
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
       <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
     </file>
     <file name="load-surveys-protocols.ts" path="/home/leticia-trouw/Estudos/Projetos/clean-node-api/src/presentation/controllers/survey/load-surveys/load-surveys-protocols.ts">
-      <metrics statements="4" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-      <line num="2" count="0" type="stmt"/>
-      <line num="3" count="0" type="stmt"/>
-      <line num="4" count="0" type="stmt"/>
+      <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
