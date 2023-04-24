@@ -9,6 +9,26 @@ import env from '../config/env'
 let surveyCollection: Collection
 let accountCollection: Collection
 
+const makeAccessToken = async (): Promise<string> => {
+  const password = await hash('123', 12)
+  const res = await accountCollection.insertOne({
+    name: 'leticia',
+    email: 'leticia@email.com',
+    password,
+    role: 'admin'
+  })
+  const accessToken = sign(res.insertedId.toString(), env.jwtSecret)
+  await accountCollection.updateOne({
+    _id: res.insertedId
+  }, {
+    $set: {
+      accessToken
+    }
+  })
+
+  return accessToken
+}
+
 describe('Survey Routes', () => {
   beforeAll(async () => {
     await MongoHelper.connect(process.env.MONGO_URL as string)
@@ -42,21 +62,7 @@ describe('Survey Routes', () => {
     })
 
     it('Should return 204 on request with valid access token', async () => {
-      const password = await hash('123', 12)
-      const res = await accountCollection.insertOne({
-        name: 'leticia',
-        email: 'leticia@email.com',
-        password,
-        role: 'admin'
-      })
-      const accessToken = sign(res.insertedId.toString(), env.jwtSecret)
-      await accountCollection.updateOne({
-        _id: res.insertedId
-      }, {
-        $set: {
-          accessToken
-        }
-      })
+      const accessToken = await makeAccessToken()
       await request(app).post('/api/v1/surveys')
         .set('x-access-token', accessToken)
         .send({
@@ -80,21 +86,7 @@ describe('Survey Routes', () => {
     })
 
     it('Should return 204 on load surveys with valid access token', async () => {
-      const password = await hash('123', 12)
-      const res = await accountCollection.insertOne({
-        name: 'leticia',
-        email: 'leticia@email.com',
-        password
-      })
-
-      const accessToken = sign(res.insertedId.toString(), env.jwtSecret)
-      await accountCollection.updateOne({
-        _id: res.insertedId
-      }, {
-        $set: {
-          accessToken
-        }
-      })
+      const accessToken = await makeAccessToken()
 
       await request(app).get('/api/v1/surveys')
         .set('x-access-token', accessToken)
