@@ -69,7 +69,7 @@ describe('Survey Routes', () => {
             answer: 'any_answer2'
           }]
         })
-        .expect(403)
+        .expect(204)
     })
   })
 
@@ -77,6 +77,38 @@ describe('Survey Routes', () => {
     it('Should return 403 on load surveys without access token', async () => {
       await request(app).get('/api/v1/surveys')
         .expect(403)
+    })
+
+    it('Should return 204 on load surveys with valid access token', async () => {
+      const password = await hash('123', 12)
+      const res = await accountCollection.insertOne({
+        name: 'leticia',
+        email: 'leticia@email.com',
+        password
+      })
+
+      const accessToken = sign(res.insertedId.toString(), env.jwtSecret)
+      await accountCollection.updateOne({
+        _id: res.insertedId
+      }, {
+        $set: {
+          accessToken
+        }
+      })
+
+      await request(app).get('/api/v1/surveys')
+        .set('x-access-token', accessToken)
+        .send({
+          question: 'any_question',
+          answers: [{
+            answer: 'any_answer',
+            image: 'image'
+          },
+          {
+            answer: 'any_answer2'
+          }]
+        })
+        .expect(204)
     })
   })
 })
